@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,.3);
+            line-height: 40px;
+        }
+        .top{
+            background-color: orange;
+            color: whitesmoke;
+            font-size: 30px;
+            font-weight: 800;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .day{
+            color: black;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .date{
+            background-color: white;
+            color: black;
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .year{
+            color: black;
+            font-size: 20px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Display</title>
+</head>
+<body>
+    <div class="container">
+        <p class="top">Month</p>
+        <p class="day">Day</p>
+        <p class="date">Date</p>
+        <p class="year">Year</p>
+    </div>
+    <script>
+        const monthElement = document.getElementsByClassName("top")[0];
+        const dayElement = document.getElementsByClassName("day")[0];
+        const dateElement = document.getElementsByClassName("date")[0];
+        const yearElement = document.getElementsByClassName("year")[0];
+        const date = new Date();
+
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June", 
+            "July", "August", "September", "October", "November", "December"
+        ];
+        const dayNames = [
+            "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ];
+
+        monthElement.textContent = monthNames[date.getMonth()];
+        dayElement.textContent = dayNames[date.getDay()];
+        dateElement.textContent = date.getDate();
+        yearElement.textContent = date.getFullYear();
+    </script>
+</body>
+</html>
+
+</body>
+</html>
